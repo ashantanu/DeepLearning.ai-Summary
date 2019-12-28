@@ -423,9 +423,11 @@ Implications of L2-regularization on:
   - (`mini batch size = between 1 and m`) ==>    Mini-batch gradient descent
 - Batch gradient descent:
   - too long per iteration (epoch)
+  - low noise
+  - larger steps towars minimum
 - Stochastic gradient descent:
   - too noisy regarding cost minimization (can be reduced by using smaller learning rate)
-  - won't ever converge (reach the minimum cost)
+  - won't ever converge (reach the minimum cost)(will oscillate around minimum)
   - lose speedup from vectorization
 - Mini-batch gradient descent:
   1. faster learning:
