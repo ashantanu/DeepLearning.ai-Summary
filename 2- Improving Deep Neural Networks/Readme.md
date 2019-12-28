@@ -404,7 +404,7 @@ Implications of L2-regularization on:
 - While in **Mini-Batch gradient descent** we run the gradient descent on the mini datasets.
 - Mini-Batch algorithm pseudo code:
   ```
-  for t = 1:No_of_batches                         # this is called an epoch
+  for t = 1:No_of_batches                         # this is called an epoch ( epoch is a word that means a single pass through the training set)
   	AL, caches = forward_prop(X{t}, Y{t})
   	cost = compute_cost(AL, Y{t})
   	grads = backward_prop(AL, caches)
