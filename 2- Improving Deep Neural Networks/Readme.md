@@ -286,6 +286,7 @@ _**Implementation tip**_: if you implement gradient descent, one of the steps to
 - A partial solution to the Vanishing / Exploding gradients in NN is better or more careful choice of the random initialization of weights
 - In a single neuron (Perceptron model): `Z = w1x1 + w2x2 + ... + wnxn`
   - So if `n_x` is large we want `W`'s to be smaller to not explode the cost.
+- We can try to set the variance of `w[i]` to be equal to `1/n_x`
 - So it turns out that we need the variance which equals `1/n_x` to be the range of `W`'s
 - So lets say when we initialize `W`'s like this (better to use with `tanh` activation):   
   ```
