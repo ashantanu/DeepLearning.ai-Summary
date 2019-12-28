@@ -264,7 +264,7 @@ _**Implementation tip**_: if you implement gradient descent, one of the steps to
   - Then, if we have 2 hidden units per layer and x1 = x2 = 1, we result in:
 
     ```
-    if W[l] = [1.5   0] 
+    if each of W[l] = [1.5   0] 
               [0   1.5] (l != L because of different dimensions in the output layer)
     Y' = W[L] [1.5  0]^(L-1) X = 1.5^L 	# which will be very large
               [0  1.5]
