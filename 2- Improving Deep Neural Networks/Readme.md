@@ -349,6 +349,8 @@ _**Implementation tip**_: if you implement gradient descent, one of the steps to
 - Don't intialize to values that are too large
 
 - He initialization works well for networks with ReLU activations. 
+- A well chosen initialization can: 1) Speed up the convergence of gradient descent
+2) Increase the odds of gradient descent converging to a lower training (and generalization) error
 
 ### Regularization summary
 
