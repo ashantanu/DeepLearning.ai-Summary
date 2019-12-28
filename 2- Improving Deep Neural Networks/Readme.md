@@ -179,7 +179,7 @@ Here are some intuitions:
      - If `lambda` is too large, w's will be small (close to zero) - will use the linear part of the _tanh_ activation function, so we will go from non linear activation to _roughly_ linear which would make the NN a _roughly_ linear classifier.
      - If `lambda` good enough it will just make some of _tanh_ activations _roughly_ linear which will prevent overfitting.
      
-_**Implementation tip**_: if you implement gradient descent, one of the steps to debug gradient descent is to plot the cost function J as a function of the number of iterations of gradient descent and you want to see that the cost function J decreases **monotonically** after every elevation of gradient descent with regularization. If you plot the old definition of J (no regularization) then you might not see it decrease monotonically.
+_**Implementation tip**_: if you implement gradient descent, one of the steps to debug gradient descent is to plot the cost function J as a function of the number of iterations of gradient descent and you want to see that the cost function J decreases **monotonically** after every iteration of gradient descent with regularization. If you plot the old definition of J (no regularization) then you might not see it decrease monotonically.
 
 
 ### Dropout Regularization
@@ -216,7 +216,7 @@ _**Implementation tip**_: if you implement gradient descent, one of the steps to
 - A downside of dropout is that the cost function J is not well defined and it will be hard to debug (plot J by iteration).
   - To solve that you'll need to turn off dropout, set all the `keep_prob`s to 1, and then run the code and check that it monotonically decreases J and then turn on the dropouts again.
 
-### Other regularization methods
+### Other methods to reduce high Variance
 
 - **Data augmentation**:
   - For example in a computer vision data:
@@ -229,7 +229,7 @@ _**Implementation tip**_: if you implement gradient descent, one of the steps to
   - We will pick the point at which the training set error and dev set error are best (lowest training cost with lowest dev cost).
   - We will take these parameters as the best parameters.
     - ![](Images/02-_Early_stopping.png)
-  - Andrew prefers to use L2 regularization instead of early stopping because this technique simultaneously tries to minimize the cost function and not to overfit which contradicts the orthogonalization approach (will be discussed further).
+  - Andrew prefers to use L2 regularization instead of early stopping because this technique simultaneously tries to minimize the cost function and not to overfit which contradicts the orthogonalization approach (will be discussed further)(Early stopping couples the two separate tasks of optimizing for W,b and preventing overfitting)
   - But its advantage is that you don't need to search a hyperparameter like in other regularization approaches (like `lambda` in L2 regularization).
 - **Model Ensembles**:
   - Algorithm:
