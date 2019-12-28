@@ -195,17 +195,20 @@ _**Implementation tip**_: if you implement gradient descent, one of the steps to
   keep_prob = 0.8   # 0 <= keep_prob <= 1
   l = 3  # this code is only for layer 3
   # the generated number that are less than 0.8 will be dropped. 80% stay, 20% dropped
-  d3 = np.random.rand(a[l].shape[0], a[l].shape[1]) < keep_prob
+  D3 = np.random.rand(A[l].shape[0], A[l].shape[1]) < keep_prob
 
-  a3 = np.multiply(a3,d3)   # keep only the values in d3
+  A3 = np.multiply(A3,D3)   # keep only the values in d3
 
-  # increase a3 to not reduce the expected value of output
+  # increase A3 to not reduce the expected value of output
   # (ensures that the expected value of a3 remains the same) - to solve the scaling problem
-  a3 = a3 / keep_prob       
+  A3 = A3 / keep_prob       
   ```
 - Vector d[l] is used for forward and back propagation and is the same for them, but it is different for each iteration (pass) or training example.
 - At test time we don't use dropout. If you implement dropout at test time - it would add noise to predictions.
-
+- Backpropagation in dropout (from assignment)
+    - apply the same mask  D3  to dA3 because we shut down these neurons in forward propagation
+    - During forward propagation, you had divided A3 by keep_prob. In backpropagation, you'll therefore have to divide dA3 by keep_prob again (the calculus interpretation is that if  A3  is scaled by keep_prob, then its derivative  dA3  is also scaled by the same keep_prob).
+    
 ### Understanding Dropout
 
 - In the previous video, the intuition was that dropout randomly knocks out units in your network. So it's as if on every iteration you're working with a smaller NN, and so using a smaller NN seems like it should have a regularizing effect.
