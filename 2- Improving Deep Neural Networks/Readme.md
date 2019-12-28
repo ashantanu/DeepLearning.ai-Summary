@@ -321,7 +321,7 @@ _**Implementation tip**_: if you implement gradient descent, one of the steps to
     for i in len(theta):
       d_theta_approx[i] = (J(theta1,...,theta[i] + eps) -  J(theta1,...,theta[i] - eps)) / 2*eps
     ```
-  - Finally we evaluate this formula `(||d_theta_approx - d_theta||) / (||d_theta_approx||+||d_theta||)` (`||` - Euclidean vector norm) and check (with eps = 10^-7):
+  - Finally we evaluate this (eucledian vector distance ) formula `(||d_theta_approx - d_theta||) / (||d_theta_approx||+||d_theta||)` (`||` - Euclidean vector norm) and check (with eps = 10^-7):
     - if it is < 10^-7  - great, very likely the backpropagation implementation is correct
     - if around 10^-5   - can be OK, but need to inspect if there are no particularly big values in `d_theta_approx - d_theta` vector
     - if it is >= 10^-3 - bad, probably there is a bug in backpropagation implementation
