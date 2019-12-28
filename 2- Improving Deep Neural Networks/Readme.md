@@ -204,6 +204,7 @@ _**Implementation tip**_: if you implement gradient descent, one of the steps to
   A3 = A3 / keep_prob       
   ```
 - Vector d[l] is used for forward and back propagation and is the same for them, but it is different for each iteration (pass) or training example.
+- why scale? For example, if keep_prob is 0.5, then we will on average shut down half the nodes, so the output will be scaled by 0.5 since only the remaining half are contributing to the solution. Dividing by 0.5 is equivalent to multiplying by 2. Hence, the output now has the same expected value
 - At test time we don't use dropout. If you implement dropout at test time - it would add noise to predictions.
 - Backpropagation in dropout (from assignment)
     - apply the same mask  D3  to dA3 because we shut down these neurons in forward propagation
