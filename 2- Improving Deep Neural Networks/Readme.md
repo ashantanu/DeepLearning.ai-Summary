@@ -703,7 +703,7 @@ Implications of L2-regularization on:
 ### Why does Batch normalization work?
 
 - The first reason is the same reason as why we normalize X.
-- The second reason is that batch normalization reduces the problem of input values changing (shifting).
+- The second reason is that batch normalization reduces the problem of input values changing (called "covariate shift", https://www.analyticsvidhya.com/blog/2017/07/covariate-shift-the-hidden-problem-of-real-world-data-science/).
 - Batch normalization does some regularization:
   - Each mini batch is scaled by the mean/variance computed of that mini-batch.
   - This adds some noise to the values `Z[l]` within that mini batch. So similar to dropout it adds some noise to each hidden layer's activations.
