@@ -577,7 +577,7 @@ Implications of L2-regularization on:
   - `beta1`: parameter of the momentum - `0.9` is recommended by default.
   - `beta2`: parameter of the RMSprop - `0.999` is recommended by default.
   - `epsilon`: `10^-8` is recommended by default.
-
+-Adam paper: https://arxiv.org/pdf/1412.6980.pdf
 ### Learning rate decay
 
 - Slowly reduce learning rate.
@@ -619,7 +619,7 @@ Implications of L2-regularization on:
   9. Adam `beta1`, `beta2` & `epsilon`.
 - Its hard to decide which hyperparameter is the most important in a problem. It depends a lot on your problem.
 - One of the ways to tune is to sample a grid with `N` hyperparameter settings and then try all settings combinations on your problem.
-- Try random values: don't use a grid.
+- Try random values: don't use a grid ( so you can try many values on the scale of one parameter, if you use a grid, you might only get a small subset of distinct values of that parameter, refer lecture notes).
 - You can use `Coarse to fine sampling scheme`:
   - When you find some hyperparameters values that give you a better performance - zoom into a smaller region around these values and sample more densely within this space.
 - These methods can be automated.
