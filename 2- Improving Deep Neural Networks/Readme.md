@@ -710,7 +710,7 @@ Implications of L2-regularization on:
   - This has a slight regularization effect.
   - Using bigger size of the mini-batch you are reducing noise and therefore regularization effect.
   - Don't rely on batch normalization as a regularization. It's intended for normalization of hidden units, activations and therefore speeding up learning. For regularization use other regularization techniques (L2 or dropout).
-
+- Why batch normalization on each mini batch? https://stats.stackexchange.com/questions/283641/why-does-batch-normalization-use-mini-batch-statistics-instead-of-the-moving-ave (feels like random sampling for mu and sigma from mini batches to me)
 ### Batch normalization at test time
 
 - When we train a NN with Batch normalization, we compute the mean and the variance of the mini-batch.
