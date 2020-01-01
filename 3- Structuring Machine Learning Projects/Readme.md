@@ -132,7 +132,7 @@ Intuition for 4 - If doing well on the test set but not in real world, then eith
 - Dev and test sets have to come from the same distribution.
 - Choose dev set and test set to reflect data you expect to get in the future and consider important to do well on.
 - Setting up the dev set, as well as the validation metric is really defining what target you want to aim at.
-
+- (from assignment) Sometimes we'll need to train the model on the data that is available, and its distribution may not be the same as the data that will occur in production. Also, adding training data that differs from the dev set may still help the model improve performance on the dev set. What matters is that the dev and test set have the same distribution
 ### Size of the dev and test sets
 
 - An old way of splitting the data was 70% training, 30% test or 60% training, 20% dev, 20% test. 
