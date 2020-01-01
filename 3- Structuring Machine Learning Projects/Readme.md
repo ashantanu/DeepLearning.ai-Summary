@@ -81,6 +81,7 @@ Here are the course summary as its given on the course [link](https://www.course
      - If its not achieved you could try bigger dev. set...
   4. Performs well in real world.
      - If its not achieved you could try change dev. set, change cost function...
+Intuition for 4 - If doing well on the test set but not in real world, then either dev test set distribution isn't set correct, or cost function isn't measuring the right thing.
 
 ### Single number evaluation metric
 
