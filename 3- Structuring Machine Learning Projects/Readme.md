@@ -264,7 +264,7 @@ Intuition for 4 - If doing well on the test set but not in real world, then eith
 
 ### Cleaning up incorrectly labeled data
 
-- DL algorithms are quite robust to random errors in the training set but less robust to systematic errors. But it's OK to go and fix these labels if you can.
+- DL algorithms are quite robust to random errors in the training set but less robust to systematic errors(eg, all white dogs are consistently mislabeled as cats). But it's OK to go and fix these labels if you can.
 - If you want to check for mislabeled data in dev/test set, you should also try error analysis with the mislabeled column. Ex:
 
   | Image        | Dog    | Great Cats | blurry  | Mislabeled | Comments |
