@@ -246,7 +246,7 @@ Intuition for 4 - If doing well on the test set but not in real world, then eith
   - Error analysis approach:
     - Get 100 mislabeled dev set examples at random.
     - Count up how many are dogs.
-    - if 5 of 100 are dogs then training your classifier to do better on dogs will decrease your error up to 9.5% (called ceiling), which can be too little.
+    - if 5 of 100 are dogs then training your classifier to do better on dogs will decrease your error up to 9.5% (called ceiling)(approximate upper bound), which can be too little.
     - if 50 of 100 are dogs then you could decrease your error up to 5%, which is reasonable and you should work on that.
 - Based on the last example, error analysis helps you to analyze the error before taking an action that could take lot of time with no need.
 - Sometimes, you can evaluate multiple error analysis ideas in parallel and choose the best idea. Create a spreadsheet to do that and decide, e.g.:
