@@ -312,7 +312,7 @@ Intuition for 4 - If doing well on the test set but not in real world, then eith
   - Train error: 1%
   - Dev error: 10%
   - In this example, you'll think that this is a variance problem, but because the distributions aren't the same you can't tell for sure. Because it could be that train set was easy to train on, but the dev set was more difficult.
-- To solve this issue we create a new set called train-dev set as a random subset of the training set (so it has the same distribution) and we get:
+- To solve this issue we create a new set called train-dev set as a random subset of the training set (so it has the same distribution)(randomly shuffle the training sets and then carve out a piece of the training set) and we get:
   - Human error: 0%
   - Train error: 1%
   - Train-dev error: 9%
