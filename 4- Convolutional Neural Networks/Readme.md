@@ -151,13 +151,14 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - In almost all the cases the padding values are zeros.
 - The general rule now,  if a matrix `nxn` is convolved with `fxf` filter/kernel and padding `p` give us `n+2p-f+1,n+2p-f+1` matrix. 
 - If n = 6, f = 3, and p = 1 Then the output image will have `n+2p-f+1 = 6+2-3+1 = 6`. We maintain the size of the image.
+- Valid convolution is when you have no padding
 - Same convolutions is a convolution with a pad so that output size is the same as the input size. Its given by the equation:
 
   ```
   P = (f-1) / 2
   ```
 
-- In computer vision f is usually odd. Some of the reasons is that its have a center value.
+- In computer vision f is usually odd. Some of the reasons is that its have a center value/pixel, and the padding is symmetric.
 
 ### Strided convolution
 
