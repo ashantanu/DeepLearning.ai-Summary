@@ -208,7 +208,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - Add b (bias) with `10x1` will get us : `4x4x10` image      `#W1a0 + b`
   - Apply RELU will get us: `4x4x10` image                `#A1 = RELU(W1a0 + b)`
   - In the last result p=0, s=1
-  - Hint number of parameters here are: `(3x3x3x10) + 10 = 280`
+  - Hint number of parameters here are: `(3x3x3x10) + 10 = 280` or `(3x3x3 +1)x10`(1 for bias)
 - The last example forms a layer in the CNN.
 - Hint: no matter the size of the input, the number of the parameters is same if filter size is same. That makes it less prone to overfitting.
 - Here are some notations we will use. If layer l is a conv layer:
