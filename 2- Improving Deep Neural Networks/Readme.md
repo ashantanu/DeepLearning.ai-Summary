@@ -877,6 +877,7 @@ _**Side notes:**_
   b1 = tf.get_variable("b1", [25,1], initializer = tf.zeros_initializer())
   ```
 - For 3-layer NN, it is important to note that the forward propagation stops at `Z3`. The reason is that in TensorFlow the last linear layer output is given as input to the function computing the loss. Therefore, you don't need `A3`!
+- For predictions in tensor flow model, we actually don't need to compute softmax of `Z3`. Taking `tf.argmax(Z3` would work, because you will use only the largest value of softmax output as y-hat, which is equivalent to largest value in `Z3`.
 - To reset the graph use `tf.reset_default_graph()`
 
 ## Extra Notes
