@@ -681,7 +681,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 
 - To make image classification we use a Conv Net with a Softmax attached to the end of it.
 
-- To make classification with localization we use a Conv Net with a softmax attached to the end of it and a four numbers `bx`, `by`, `bh`, and `bw` to tell you the location of the class in the image. The dataset should contain this four numbers with the class too.
+- To make classification with localization we use a Conv Net with a softmax attached to the end of it and a four numbers `bx`, `by`, `bh`, and `bw` to tell you the location of the class in the image. The dataset should contain this four numbers with the class too. (bx and by give coordinates of the center of the box acc to the lecture, bh and bw are hieght and width of the box)
 
 - Defining the target label Y in classification with localization problem: 
 
