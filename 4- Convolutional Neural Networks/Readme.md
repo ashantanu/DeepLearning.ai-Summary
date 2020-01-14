@@ -1383,6 +1383,15 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - After you create the model you can run it in a tensorflow session without compiling, training, and testing capabilities.
 - You can save your model with `model_save` and load your model using `model_load ` This will save your whole trained model to disk with the trained weights.
 
+### NST Assignment
+- "I guess the key points to understand all this is that a_C and a_S are (pre) computed before model_nn() is called. that is done through sess.run(out). To compute a_C and a_S, model["input"] has to be initialized with content image and style image respectively, and sess.run(model['input'].assign(content_image)) , sess.run(model['input'].assign(style_image)) do exactly that.
+
+After a_C and a_S are computed, model["input"] variable then is used a parameter variable in model_nn() , and is re-initialized with first generated image (this is why in model-nn, we need line like: sess.run(model['input'].assign(generated_image)) before the iteration loop.
+
+a_G = out, so it is a un-evaluated graph node in cost function, and it has to be un-evaluated at this point , because evaluation of a_G depends on previous generated image. cost function is evaluated by optimizer in forwardProp (by calling something like sess.run(...), which triggers sess.run(a_G)), and model["input"] as parameter variable is updated during opitmizer's backprop. Then next forward will update a_G with newly generated image value of model["input"].
+
+Those are my understanding, may not exactly right." https://www.coursera.org/learn/convolutional-neural-networks/programming/owWbQ/art-generation-with-neural-style-transfer/discussions/threads/WHVEmcaQEeeaSxJ_5wiJJg
+
 
 
 
