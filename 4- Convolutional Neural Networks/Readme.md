@@ -1308,7 +1308,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - In this matrix each cell will tell us how correlated is a channel to another channel.
   - To populate the matrix we use these equations to compute style matrix of the style image and the generated image.
     - ![](Images/43.png)
-    - As it appears its the sum of the multiplication of each member in the matrix.
+    - As it appears its the sum of the multiplication of each member in the matrix and not the exact correlation (since we don't subtract mean)
 - To compute gram matrix efficiently:
   - Reshape activation from H X W X C to HW X C
   - Name the reshaped activation F.
