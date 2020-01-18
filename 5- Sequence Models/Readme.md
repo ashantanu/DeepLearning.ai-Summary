@@ -234,6 +234,7 @@ Here are the course summary as its given on the course [link](https://www.course
      - This is the line where you get a random beginning of the sentence each time you sample run a novel sequence.
   4. We pass the last predicted word with the calculated  a<sup><1></sup>
   5. We keep doing 3 & 4 steps for a fixed length or until we get the `<EOS>` token.
+  ![](Images/sample.png)
   6. You can reject any `<UNK>` token if you mind finding it in your output.
 - So far we have to build a word-level language model. It's also possible to implement a **character-level** language model.
 - In the character-level language model, the vocabulary will contain `[a-zA-Z0-9]`, punctuation, special characters and possibly <EOS> token.
