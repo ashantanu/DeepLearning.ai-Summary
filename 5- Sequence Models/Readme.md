@@ -326,8 +326,7 @@ Here are the course summary as its given on the course [link](https://www.course
       | ...     | 0                          | new_val         |
       | was     | 1 (I don't need it anymore)| newer_val       |
       | full    | ..                         | ..              |
-- Drawing for the GRUs   
-  ![](Images/19.png)
+-   ![](Images/gru.png)
   - Drawings like in http://colah.github.io/posts/2015-08-Understanding-LSTMs/ is so popular and makes it easier to understand GRUs and LSTMs. But Andrew Ng finds it's better to look at the equations.
 - Because the update gate U is usually a small number like 0.00001, GRUs doesn't suffer the vanishing gradient problem.
   - In the equation this makes C<sup>\<t></sup> = C<sup>\<t-1></sup> in a lot of cases.
