@@ -212,7 +212,8 @@ Here are the course summary as its given on the course [link](https://www.course
 - Given the sentence "Cats average 15 hours of sleep a day. `<EOS>`"
   - In training time we will use this:   
     ![](Images/13.png)
-  - x1 is usually a 0 vector. A1 or yhat1 is the probability that any word of the vocabulary is the fird word of the input sentence. eg. P<Aaron>, P<EOS> etc.
+  - x1 is usually a 0 vector. A1 or yhat1 is the probability that any word of the vocabulary is the fird word of the input sentence. eg. P(Aaron), P(EOS) etc.
+  - Each step in the RNN will look at some set of preceding words such as, given the first three words, what is the distribution over the next word? Gives probability of each word in vacab given the history of preceding words.
   - The loss function is defined by cross-entropy loss:   
     ![](Images/14.png)
     - `i`  is for all elements in the corpus, `t` - for all timesteps.
