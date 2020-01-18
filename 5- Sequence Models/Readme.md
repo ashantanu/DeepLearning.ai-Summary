@@ -229,7 +229,7 @@ Here are the course summary as its given on the course [link](https://www.course
   1. Given this model:   
      ![](Images/15.png)
   2. We first pass a<sup><0></sup> = zeros vector, and x<sup><1></sup> = zeros vector.
-  3. Then we choose a prediction randomly from distribution obtained by y&#770;<sup><1></sup>. For example it could be "The".
+  3. Then we sample/choose a prediction randomly from distribution obtained by y&#770;<sup><1></sup>. For example it could be "The".
      - In numpy this can be implemented using: `numpy.random.choice(...)`
      - This is the line where you get a random beginning of the sentence each time you sample run a novel sequence.
   4. We pass the last predicted word with the calculated  a<sup><1></sup>
