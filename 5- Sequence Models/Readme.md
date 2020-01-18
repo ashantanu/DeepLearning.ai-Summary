@@ -212,7 +212,7 @@ Here are the course summary as its given on the course [link](https://www.course
 - Given the sentence "Cats average 15 hours of sleep a day. `<EOS>`"
   - In training time we will use this:   
     ![](Images/13.png)
-  - x1 is usually a 0 vector. But what A1 does is it will make a soft max prediction to try to figure out what is the probability of the first words y. And so that's going to be y<1>. So what this step does is really, it has a soft max it's trying to predict. What is the probability of any word in the dictionary?. eg. P<Aaron>, P<EOS> etc.
+  - x1 is usually a 0 vector. A1 or yhat1 is the probability that any word of the vocabulary is the fird word of the input sentence. eg. P<Aaron>, P<EOS> etc.
   - The loss function is defined by cross-entropy loss:   
     ![](Images/14.png)
     - `i`  is for all elements in the corpus, `t` - for all timesteps.
