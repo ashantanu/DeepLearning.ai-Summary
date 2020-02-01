@@ -383,6 +383,7 @@ Here are the course summary as its given on the course [link](https://www.course
 - > In modern deep learning frameworks, you only have to implement the forward pass, and the framework takes care of the backward pass, so most deep learning engineers do not need to bother with the details of the backward pass. If however you are an expert in calculus and want to see the details of backprop in RNNs, you can work through this optional portion of the notebook.
 
 - The quote is taken from this [notebook](https://www.coursera.org/learn/nlp-sequence-models/notebook/X20PE/building-a-recurrent-neural-network-step-by-step). If you want the details of the back propagation with programming notes look at the linked notebook.
+- http://cs231n.stanford.edu/vecDerivs.pdf for matrix vector derivatives.
 
 ## Natural Language Processing & Word Embeddings
 
