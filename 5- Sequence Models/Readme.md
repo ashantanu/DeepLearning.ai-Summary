@@ -660,7 +660,9 @@ Here are the course summary as its given on the course [link](https://www.course
        - To do that, we move grandfather and grandmother to a point where they will be in the middle of the non-bias axis.
        - There are some words you need to do this for in your steps. Number of these words is relatively small.
 
-
+#### Assignment notes:
+- Confusion Matrix: A confusion matrix shows how often an example whose label is one class ("actual" class) is mislabeled by the algorithm with a different class ("predicted" class).
+![](Images/confusion_mat.png)
 ## Sequence models & Attention mechanism
 
 > Sequence models can be augmented using an attention mechanism. This algorithm will help your model understand where it should focus its attention given a sequence of inputs. This week, you will also learn about speech recognition and how to deal with audio data.
